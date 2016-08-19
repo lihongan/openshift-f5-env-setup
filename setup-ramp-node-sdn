@@ -31,8 +31,8 @@ F5_IP="$1"
 OSDN_PLUGIN="$2"
 TUNNEL_IP1="10.3.91.216"
 TUNNEL_IP2="10.3.91.217"
-CLUSTER_NETWORK="10.128.0.0/14"
-openshift_node_service="origin-node"
+CLUSTER_NETWORK="10.1.0.0/16"
+openshift_node_service="atomic-openshift-node"
 tap1=$(ip -o -4 addr list tun0 | awk '{print $4}' | cut -d/ -f1 | head -n 1)
 
 
