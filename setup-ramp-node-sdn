@@ -80,7 +80,7 @@ sleep 42
 
 echo "  - Setting up OpenShift SDN for F5+${OSDN_PLUGIN} config ... "
 echo "  - Sourcing env from /etc/openshift-sdn/config.env ... "
-source /etc/openshift-sdn/config.env
+source /run/openshift-sdn/config.env
 subaddr=$(echo ${OPENSHIFT_SDN_TAP1_ADDR:-"${tap1}"} | cut -d "." -f 1,2,3)
 export RAMP_SDN_IP=${subaddr}.254
 
